@@ -33,6 +33,14 @@
     flex-wrap: wrap;
 }
 
+@mixin flex_JCsb-FWw {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
 
 //! ----------- SASS: Загальні стилі кнопок -----------
 @mixin buttons {

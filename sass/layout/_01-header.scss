@@ -1,19 +1,40 @@
-.header- {
-    padding-top: 71px;
-    padding-bottom: 92px;
+.header {
+    padding-top: 15px;
+    padding-bottom: 20px;
+
+    @media screen and (min-width: getBreakPoint('tablet')) {
+        padding-top: 30px;
+        padding-bottom: 40px;
+    }
+    
+    @media screen and (min-width: getBreakPoint('desktop')) {
+        padding-top: 71px;
+        padding-bottom: 92px;
+    }
 
     .nav-list {
-        width: 555px;
-        margin: 0 auto;
-        @include flex_JCsb;
+        @include flex_FDcol-AIcen;
+        row-gap: 20px;
         //! outline-міксін 
-        // @include outline(1px, dashed, #2a2a2a);
+        @include outline(1px, dashed, #2a2a2a);
+        
+        @media screen and (min-width: getBreakPoint('tablet')) {
+            width: 200px;
+            margin: 0 auto;
+            @include flex_JCsb-FWw;
+            row-gap: 30px;
+        }
+        
+        @media screen and (min-width: getBreakPoint('desktop')) {
+            width: 555px;
+            // @include flex_JCsb;
+        }
 
         &__link {
             text-transform: uppercase;
             color: getColor('second');
         }
-        
+
         &__item:hover  .nav-list__link {
             color: getColor('hover');
         }
