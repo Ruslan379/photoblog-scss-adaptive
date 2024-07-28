@@ -36,15 +36,6 @@ button:hover {
   cursor: pointer;
 }
 
-:root {
-  --font-family: "Playfair Display", sans-serif;
-  --second-family: "Ubuntu", sans-serif;
-  --color-main: #626262;
-  --color-second: #7d7d7d;
-  --color-third: #b4ad9e;
-  --color-hover: #03a9f4;
-}
-
 .gallery .container .gallery__button-firts {
   align-self: center;
   padding: 20px 48px 21px 48px;
@@ -56,7 +47,7 @@ body {
   font-family: "Playfair Display";
   font-size: 14px;
   color: #626262;
-  background-color: wheat;
+  background-color: #b3f5ea;
 }
 
 .container {
@@ -83,7 +74,6 @@ body {
   justify-content: space-between;
 }
 .header .nav-list__link {
-  text-transform: lowercase;
   text-transform: uppercase;
   color: #7d7d7d;
 }

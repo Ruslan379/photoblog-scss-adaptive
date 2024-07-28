@@ -1,31 +1,3 @@
-//? ============= var-00. CSS-змінні ============
-:root {
-    //* ================= fonts ===================
-    --font-family: "Playfair Display", sans-serif;
-    --second-family: "Ubuntu", sans-serif;
-    //* ================= colors ==================
-    --color-main: #626262;
-    --color-second:  #7d7d7d;
-    --color-third:   #b4ad9e;
-    --color-hover: #03a9f4;
-}
-//? _______________________________________________
-
-
-
-//? ============= var-01. SCSS-змінні ============
-//* ================= fonts ===================
-$font-family: "Playfair Display", sans-serif;
-$second-family: "Ubuntu", sans-serif;
-//* ================= colors ==================
-$color-main: #626262;
-$color-second:#7d7d7d;
-$color-third: #b4ad9e;
-$color-hover:#03a9f4;
-//? _______________________________________________
-
-
-
 //? ==============  var-02. map-get ==============
 // * ================= fonts ===================
 $fonts: (

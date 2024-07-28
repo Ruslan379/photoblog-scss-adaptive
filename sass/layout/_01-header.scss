@@ -2,49 +2,20 @@
 .header {
     padding-top: 71px;
     padding-bottom: 92px;
-    // background-color: rgb(255, 235, 211);
 
     .nav-list {
         width: 555px;
         margin: 0 auto;
-        // -----------------------------------------
-        //? CSS flex
-        // display: flex;
-        // justify-content: space-between;
-        //*  SASS-flex - Використання плейсхолдера:
-        // @extend %flex_JCsb;
-        //!  SASS-flex - Використання міксіна:
         @include flex_JCsb;
-        // -----------------------------------------
-        //? CSS-outline
-        // outline: 1px dashed #2a2a2a;
         //! SASS-outline - міксін var.1 
         // @include outline(1px, dashed, #2a2a2a);
-        //! SASS-outline міксін var.2 
-        // @include outline;
-         // -----------------------------------------
 
         &__link {
-            text-transform: lowercase;
             text-transform: uppercase;
-            //? Змінні в CSS:
-            // color: var(--color-second);
-            //! Змінні в SCSS:
-            // color: $color-second;
-            // color: map-get($colors, 'second');
             color: getColor('second');
-            // color: red;
-
-            //! так НЕ ПРАЦЮЄ!
-            // .nav-list__item:hover  & {
-            //     color: getColor('hover');
-            // }
         }
         
         &__item:hover  .nav-list__link {
-            //? Змінні в CSS:
-            // color: var(--color-hover);
-            //! Змінні в SCSS:
             color: getColor('hover');
         }
     }

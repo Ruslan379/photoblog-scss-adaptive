@@ -1,5 +1,6 @@
 .container {
     width: 905px;
     margin: 0 auto;
-    // outline: 1px solid red; 
+    //! SASS-outline - міксін var.1 
+    // @include outline();
 }

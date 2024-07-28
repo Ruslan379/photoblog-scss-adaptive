@@ -1,13 +1,10 @@
-//! ----------- SASS-outline міксін  -----------
-// outline: 1px solid tomato;
-
 //todo  міксін var.1
 // @mixin outline($size, $type, $color) {
 //     outline: $size $type $color;
 // }
 
 //todo міксін var.2  
-@mixin outline($size: 1px, $type: solid, $color: tomato) {
+@mixin outline($size: 1px, $type: solid, $color: red) {
     outline: $size $type $color;
 }
 
