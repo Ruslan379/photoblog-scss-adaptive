@@ -89,7 +89,6 @@ body {
   flex-wrap: wrap;
   column-gap: 65px;
   row-gap: 130px;
-  outline: 2px dotted tomato;
 }
 .gallery .container .gallery-list__item {
   flex-basis: calc((100% - 65px) / 2);
