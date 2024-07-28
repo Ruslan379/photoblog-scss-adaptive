@@ -46,11 +46,13 @@ body {
 .container {
   width: 100%;
   min-width: 320px;
+  padding: 0 15px;
   margin: 0 auto;
+  outline: 1px solid red;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 450px) {
   .container {
-    max-width: 480px;
+    max-width: 450px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -96,6 +98,7 @@ body {
 .gallery .container {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .gallery .container .gallery-title {
   display: none;
@@ -115,12 +118,11 @@ body {
   }
 }
 .gallery .container .gallery-list__item {
-  max-width: 420px;
-}
-@media screen and (min-width: 480px) {
-  .gallery .container .gallery-list__item {
-    flex-basis: 100%;
-  }
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  outline: 2px dashed #00bbbb;
 }
 @media screen and (min-width: 768px) {
   .gallery .container .gallery-list__item {
@@ -133,17 +135,17 @@ body {
   }
 }
 .gallery .container .gallery-list__img {
-  margin-bottom: 62px;
-  margin: 0 auto;
+  margin: 0 auto 62px;
 }
 .gallery .container .gallery-list__link {
   display: block;
   margin-bottom: 32px;
-  font-family: var(--second-family);
+  font-family: "Ubuntu";
   font-weight: 300;
-  color: var(--color-third);
+  color: #b4ad9e;
 }
 .gallery .container .gallery-list__title {
+  flex-grow: 1;
   margin-bottom: 40px;
   font-weight: 400;
   font-size: 30px;

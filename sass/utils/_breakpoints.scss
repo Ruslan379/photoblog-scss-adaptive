@@ -1,11 +1,11 @@
 //? ============= var-01.SCSS-змінні  (break-points) ============
-$mobile: 480px;
+$mobile: 450px;
 $tablet: 768px;
 $desktop: 1200px;
 
 //? ==============  var-02.map-get (break-points) ==============
 $break-points: (
-    mobile: 480px,
+    mobile: 450px,
     tablet: 768px,
     desktop: 1200px,
 );

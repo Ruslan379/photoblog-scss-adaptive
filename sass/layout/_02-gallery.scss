@@ -3,69 +3,62 @@
 
     .container {
         //!  SASS-flex - Використання міксіна:
-        @include flex_FDcol;
-        
+        @include flex_FDcol-AIcen;
+
         .gallery-title {
             display: none;
         }
-        
+
         .gallery-list {
-            
             // @media screen and (max-width: 767px) {
             // @media screen and (max-width: calc(#{getBreakPoint('tablet')} - 1px)) {
-                //!  SASS-flex - Використання міксіна:
                 @include flex_FDcol-AIcen;
                 row-gap: 130px;
             // }
-
-            @media screen and (min-width: getBreakPoint('tablet')) {
-                //!  SASS-flex- Використання міксіна:
-                @include flex_FWw;
-                column-gap: 65px;
-                // row-gap: 130px;
-            }
-            
-            //! SASS-outline - міксін var.1 
+            //! outline-міксін 
             // @include outline(2px, dotted, tomato);
             
+            //! Медіа-запити
+            @media screen and (min-width: getBreakPoint('tablet')) {
+                @include flex_FWw;
+                column-gap: 65px;
+            }
+
             &__item {
-                max-width: 420px;
-                // flex-basis: calc((100% - 130px) / 3);
-                //! ДОДАВАННЯ ФОНОВИХ ЗОБРАЖЕНЬ
-                //todo var.2 - Використання Міксін + @each - цикл для додавання фонових зображень
-                // @include galleryItemNumber($numbers);
-                // background-repeat: no-repeat;
-                //* Інтерполяція значення змінної (правильний синтаксис):
-                // background-position: right calc(50% + #{$gallery-item-indentation});
-
-                @media screen and (min-width: getBreakPoint('mobile')) {
-                    flex-basis: 100%;
-                }
-
+                flex-basis: 100%;
+                @include flex_FDcol;
+                align-self: stretch;
+                //! outline-міксін 
+                @include outline(2px, dashed, #00bbbb);
+                
+                //! Медіа-запити
+                // @media screen and (min-width: getBreakPoint('mobile')) {
+                //     flex-basis: 100%;
+                // }
+                
                 @media screen and (min-width: getBreakPoint('tablet')) {
                     flex-basis: calc((100% - 65px) / 2);
                 }
-
+                
                 @media screen and (min-width: getBreakPoint('desktop')) {
                     flex-basis: calc((100% - 130px) / 3);
                 }
             }
-            
+
             &__img {
-                // flex-basis: 100%;
-                margin-bottom: 62px;
-                margin: 0 auto;
+                margin: 0 auto 62px;
             }
-            
+
             &__link {
                 display: block;
                 margin-bottom: 32px;
-                font-family: var(--second-family);
+                font-family: getFont('second-family');
                 font-weight: 300;
-                color: var(--color-third);
+                color: getColor('third');
             }
-            
+
             &__title {
+                flex-grow: 1;
                 margin-bottom: 40px;
                 font-weight: 400;
                 font-size: 30px;

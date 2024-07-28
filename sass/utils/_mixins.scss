@@ -41,25 +41,3 @@
     font-size: 1.5rem;
     background-color: inherit;
 }
-
-
-//!--- Міксін для @each - цикла для додавання фонових зображень .gallery-list -----------
-//todo var.2
-@mixin galleryItemNumber($numbers) {
-    @each $number in $numbers {
-        &--#{$number} {
-            background-image: 
-                url(https://img.icons8.com/ios/50/#{$number}.png);
-        }
-    }
-}
-
-//todo var.3
-@mixin galleryItemNumberList($numbers) {
-    @each $number in $numbers {
-        &__item--#{$number} {
-            background-image: 
-                url(https://img.icons8.com/ios/50/#{$number}.png);
-        }
-    }
-}

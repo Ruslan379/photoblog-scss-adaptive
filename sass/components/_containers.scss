@@ -1,7 +1,8 @@
+//todo OLD container
 // .container {
 //     width: 905px;
 //     margin: 0 auto;
-//     //! SASS-outline - міксін var.1 
+//     //! outline-міксін  
 //     // @include outline();
 // }
 
@@ -11,12 +12,12 @@
 //     min-width: 320px;
 //     // padding: 0 15px;
 //     margin: 0 auto;
-//     //! SASS-outline - міксін var.1 
+//     //! outline-міксін  
 //     // @include outline();
-
+        
 //         //! Медіа-запити
 //         @media screen and (min-width: $mobile) {
-//             width: 480px;
+//             width: 450px;
 //         }
         
 //         @media screen and (min-width: $tablet) {
@@ -32,16 +33,16 @@
 .container {
     width: 100%;
     min-width: 320px;
-    // padding: 0 15px;
+    padding: 0 15px;
     margin: 0 auto;
-    //! SASS-outline - міксін var.1 
-    // @include outline();
-
+    //! outline-міксін 
+    @include outline();
+        
         //! Медіа-запити
         //? var-03.map-get --> getBreakPoint
         @media screen and (min-width: getBreakPoint('mobile')) {
             max-width: getBreakPoint('mobile');
-            // width: 480px;
+            // width: 450px;
         }
         
         @media screen and (min-width: getBreakPoint('tablet')) {
