@@ -5,11 +5,11 @@
     .container {
         //!  SASS-flex - Використання міксіна:
         @include flex_FDcol;
-
+        
         .gallery-title {
             display: none;
         }
-
+        
         .gallery-list {
             //!  SASS-flex- Використання міксіна:
             @include flex_FWw;
@@ -27,7 +27,7 @@
                 //* Інтерполяція значення змінної (правильний синтаксис):
                 background-position: right calc(50% + #{$gallery-item-indentation});
             }
-
+            
             &__img {
                 margin-bottom: 62px;
             }
