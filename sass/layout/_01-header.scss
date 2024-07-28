@@ -1,7 +1,8 @@
 .header {
     padding-top: 15px;
     padding-bottom: 20px;
-    
+
+    //! Медіа-запити
     @media screen and (min-width: getBreakPoint('tablet')) {
         padding-top: 30px;
         padding-bottom: 40px;
@@ -18,6 +19,7 @@
         //! outline-міксін 
         // @include outline(1px, dashed, #2a2a2a);
         
+        //! Медіа-запити
         @media screen and (min-width: getBreakPoint('tablet')) {
             width: 200px;
             margin: 0 auto;
