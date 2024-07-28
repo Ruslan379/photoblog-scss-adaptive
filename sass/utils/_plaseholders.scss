@@ -1,0 +1,24 @@
+//* ----------- SASS-flex-властивості (flex-контейнери) -----------
+%flex_JCsb {
+    display: flex;
+    justify-content: space-between;
+}
+
+%flex_FDcol {
+    display: flex;
+    flex-direction: column;
+}
+
+%flex_FWw {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+//* ----------- SASS: Загальні стилі кнопок -----------
+%buttons {
+    align-self: center;
+    padding: 20px 48px 21px 48px;
+    font-size: 1.5rem;
+    background-color: inherit;
+}

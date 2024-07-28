@@ -1,0 +1,61 @@
+//! ----------- SASS-outline міксін  -----------
+// outline: 1px solid tomato;
+
+//todo  міксін var.1
+// @mixin outline($size, $type, $color) {
+//     outline: $size $type $color;
+// }
+
+//todo міксін var.2  
+@mixin outline($size: 1px, $type: solid, $color: tomato) {
+    outline: $size $type $color;
+}
+
+
+//! ----------- SASS-flex-властивості (flex-контейнери-міксіни) -----------
+@mixin flex_JCsb {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@mixin flex_FDcol {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex_FWw {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+//! ----------- SASS: Загальні стилі кнопок -----------
+@mixin buttons {
+    align-self: center;
+    padding: 20px 48px 21px 48px;
+    font-size: 1.5rem;
+    background-color: inherit;
+}
+
+
+//!--- Міксін для @each - цикла для додавання фонових зображень .gallery-list -----------
+//todo var.2
+@mixin galleryItemNumber($numbers) {
+    @each $number in $numbers {
+        &--#{$number} {
+            background-image: 
+                url(https://img.icons8.com/ios/50/#{$number}.png);
+        }
+    }
+}
+
+//todo var.3
+@mixin galleryItemNumberList($numbers) {
+    @each $number in $numbers {
+        &__item--#{$number} {
+            background-image: 
+                url(https://img.icons8.com/ios/50/#{$number}.png);
+        }
+    }
+}

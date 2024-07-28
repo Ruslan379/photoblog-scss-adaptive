@@ -1,0 +1,165 @@
+//! section gallery SCSS
+.gallery {
+    margin-bottom: 66px;
+    // background-color: rgb(218, 255, 218); 
+
+    .container {
+        //? CSS flex
+        // display: flex;
+        // flex-direction: column;
+        //*  SASS-flex - Використання плейсхолдера:
+        // @extend %flex_FDcol;
+        //!  SASS-flex - Використання міксіна:
+        @include flex_FDcol;
+
+        .gallery-title {
+            display: none;
+        }
+
+        .gallery-list {
+            //? CSS-flex
+            // display: flex;
+            // flex-wrap: wrap;
+            //*  SASS-flex - Використання плейсхолдера:
+            // @extend %flex_FWw;
+            //!  SASS-flex- Використання міксіна:
+            @include flex_FWw;
+            column-gap: 65px;
+            row-gap: 130px;
+            
+            &__item {
+                flex-basis: calc((100% - 65px) / 2);
+                //! ДОДАВАННЯ ФОНОВИХ ЗОБРАЖЕНЬ
+                // background-image: url(https://img.icons8.com/ios/50/1.png);
+                background-repeat: no-repeat;
+                // -----------------------------------------
+                //! АРИФМЕТИЧНІ ОПЕРАЦІЇ:
+                //todo Без змінних:
+                // background-position: right calc(50% + 40px);
+                //? Так ТЕЖ працює, хоча не повинно працювати:
+                // background-position: right calc(50% + $gallery-item-indentation);
+                //* Інтерполяція значення змінної (правильний синтаксис):
+                background-position: right calc(50% + #{$gallery-item-indentation});
+                // -----------------------------------------
+                //todo var.1 - Використання @each - цикл для додавання фонових зображень
+                // @each $number in $numbers {
+                //     &--#{$number} {
+                //         background-image: 
+                //             url(https://img.icons8.com/ios/50/#{$number}.png);
+                //     }
+                // }
+                //todo var.2 - Використання Міксін + @each - цикл для додавання фонових зображень
+                @include galleryItemNumber($numbers);
+            }
+            
+            //todo var.3 - Використання Міксін + @each - цикл для додавання фонових зображень
+            // @include galleryItemNumberList($numbers);
+            
+            &__img {
+                margin-bottom: 62px;
+            }
+            
+            &__link {
+                display: block;
+                margin-bottom: 32px;
+                font-family: var(--second-family);
+                font-weight: 300;
+                color: var(--color-third);
+            }
+            
+            &__title {
+                margin-bottom: 40px;
+                font-weight: 400;
+                font-size: 30px;
+                text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            }
+        }
+
+        //* +++++ СТИЛІЗАЦІЯ КНОПОК - 1-й варіант +++++
+        //* Використання Міксів та Модифікаторів
+        // //! Загальні стилі кнопки
+        // .gallery-button {
+        //     align-self: center;
+        //     // margin-top: 90px;
+        //     padding: 20px 48px 21px 48px;
+        //     font-size: 1.5rem;
+        //     background-color: inherit;
+        // }
+        
+        // //! Мікси (міксування, суміш).
+        // //!  Зовнішня геометрія або позиціонування, необхідні тільки у певному місці
+        // .gallery__button-firts {
+        //     margin-top: 90px;
+        // }
+        
+        // .gallery__button-second {
+        //     margin-top: 10px;
+        // }
+        
+        // //! Модифікатор - визначає зміну зовнішнього вигляду
+        // .gallery-button--style-firts {
+        //     color: red;
+        //     background-color: aqua;
+        // }
+        
+        // .gallery-button--style-second {
+        //     color: aqua;
+        //     background-color: red;
+        // }
+
+        //* +++++ СТИЛІЗАЦІЯ КНОПОК - 2-й варіант +++++
+        //* Використання Директиви @extend
+        //! Загальні стилі кнопки
+        //? Додатковий клас, також є в components/_buttons.scss:
+        // .buttons {
+        //     align-self: center;
+        //     padding: 20px 48px 21px 48px;
+        //     font-size: 1.5rem;
+        //     background-color: inherit;
+        // }
+        //* Шаблон (плейсхолдер), також є в utils/_plaseholders.scss:
+        // %buttons {
+        //     align-self: center;
+        //     padding: 20px 48px 21px 48px;
+        //     font-size: 1.5rem;
+        //     background-color: inherit;
+        // }
+        //! Міксін, також є в utils/_mixins.scss:
+        // @mixin buttons {
+        //     align-self: center;
+        //     padding: 20px 48px 21px 48px;
+        //     font-size: 1.5rem;
+        //     background-color: inherit;
+        // }
+        
+        //! Стилі кнопки firts
+        .gallery__button-firts {
+            // -----------------------------------------
+            //? Використання додаткового класу:
+            // @extend .buttons;
+            //* Використання плейсхолдера:
+            @extend %buttons;
+            //! Використання міксіна:
+            // @include buttons;
+            // -----------------------------------------
+            margin-top: 90px;
+            color: red;
+            background-color: aqua;
+        }
+        
+        //! Стилі кнопки second
+        .gallery__button-second {
+            // -----------------------------------------
+            //? Використання додаткового класу:
+            // @extend .buttons;
+            //* Використання плейсхолдера:
+            // @extend %buttons;
+            //! Використання міксіна:
+            @include buttons;
+            // -----------------------------------------
+            margin-top: 10px;
+            color: aqua;
+            background-color: red;
+        }
+    }
+}

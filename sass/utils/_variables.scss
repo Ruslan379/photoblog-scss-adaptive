@@ -1,0 +1,67 @@
+//? ============= var-00. CSS-змінні ============
+:root {
+    //* ================= fonts ===================
+    --font-family: "Playfair Display", sans-serif;
+    --second-family: "Ubuntu", sans-serif;
+    //* ================= colors ==================
+    --color-main: #626262;
+    --color-second:  #7d7d7d;
+    --color-third:   #b4ad9e;
+    --color-hover: #03a9f4;
+}
+//? _______________________________________________
+
+
+
+//? ============= var-01. SCSS-змінні ============
+//* ================= fonts ===================
+$font-family: "Playfair Display", sans-serif;
+$second-family: "Ubuntu", sans-serif;
+//* ================= colors ==================
+$color-main: #626262;
+$color-second:#7d7d7d;
+$color-third: #b4ad9e;
+$color-hover:#03a9f4;
+//? _______________________________________________
+
+
+
+//? ==============  var-02. map-get ==============
+// * ================= fonts ===================
+$fonts: (
+    font-family: "Playfair Display",
+    second-family: "Ubuntu",
+);
+// * ================= colors ==================
+$colors: (
+    main:#626262,
+    second:#7d7d7d,
+    third:#b4ad9e,
+    hover:#03a9f4,
+);
+//? _______________________________________________
+
+
+
+//? ======== var-03. map-get --> getColor ========
+// * ================= fonts ===================
+@function getFont($key) {
+    @return map-get($fonts, $key);
+}
+// * ================= colors ==================
+@function getColor($key) {
+    @return map-get($colors, $key);
+}
+//? _______________________________________________
+
+
+//? == Cписок, або масив значень (numbers) ==
+$numbers: "1", "2", "3", "4", "5", "6";
+//? ______________________________________________
+
+
+//? == Змінна для прикладу АРИФМЕТИЧНІ ОПЕРАЦІЇ ==
+$gallery-item-indentation: 40px;
+//? _____________________________________________
+
+

@@ -1,0 +1,49 @@
+//todo БУЛО:
+// body {
+//     font-family: var(--font-family);
+//     font-size: 14px;
+//     color: var(--color-main);
+//     background-color: wheat;
+// }
+
+
+//* СТАЛО:
+body {
+    font-family: getFont('font-family');
+    font-size: 14px;
+    color: getColor('main');
+    background-color: wheat;
+}
+
+
+//? Приклади: покрокові варіанти використання змінних:
+// body {
+//     //* ================= fonts ===================
+//     //? var-00.CSS-змінні
+//     font-family: var(--font-family);
+
+//     //? var-01.SCSS-змінні
+//     font-family: $font-family;
+
+//     //? var-02.map-get
+//     font-family: map-get($fonts, 'font-family');
+
+//     //? var-03.map-get --> getColor
+//     font-family: getFont('font-family');
+
+//     //* ================= colors ===================
+//     //? var-00.CSS-змінні
+//     color: var(--color-main);
+
+//     //? var-01.SCSS-змінні
+//     color: $color-main;
+
+//     //? var-02.map-get
+//     color: map-get($colors, 'main');
+
+//     //? var-03.map-get --> getColor
+//     color: getColor('main');
+// }
+
+
+

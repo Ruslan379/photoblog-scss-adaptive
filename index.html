@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--! назва сторінки (вкладки) -->
+    <title>Photoblog SASS</title>
+    <!--! завантаження іконки до назви сторінки (вкладки) title -->
+    <link
+        href="https://img.icons8.com/external-tal-revivo-color-tal-revivo/16/external-xanga-a-website-that-hosts-weblogs-photoblogs-and-social-networking-profiles-logo-color-tal-revivo.png"
+        type="image/x-icon" 
+        rel="shortcut icon"
+    >
+
+    <!--! Спочатку нормалізатор -->
+    <!--! завантаження modern-normalize -->
+    <link 
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" 
+    />
+
+    <!--! завантаження шрифтів 'Playfair Display' Regular 400  + 'Ubuntu' 300-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Ubuntu:wght@300&display=swap"
+        rel="stylesheet"
+    >
+
+    <!--! файл reset.css -->
+    <!-- <link rel="stylesheet" href="./css/reset.css"> -->
+    <!--! зовнішній файл стилів -->
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
+    <!--! зовнішній файл стилів main.min.css -->
+    <link rel="stylesheet" href="./css/main.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="header-nav header__nav">
+                <ul class="header-nav-list nav-list">
+                    <li class="header-nav-list-item nav-list__item">
+                        <a class="header-nav-list-item-link nav-list__link" href="./lifestyle.html">LIFESTYLE</a>
+                    </li>
+                    <li class="header-nav-list-item nav-list__item">
+                        <a class="header-nav-list-item-link nav-list__link" href="./photodiary.html">PHOTODIARY</a>
+                    </li>
+                    <li class="header-nav-list-item nav-list__item">
+                        <a class="header-nav-list-item-link nav-list__link" href="./music.html">MUSIC</a>
+                    </li>
+                    <li class="header-nav-list-item nav-list__item">
+                        <a class="header-nav-list-item-link nav-list__link"href="./travel.html">TRAVEL</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="gallery">
+            <div class="container flex-colum-container">
+                <h1 class="gallery-title">Photoblog</h1>
+                <ul class="gallery-list">
+                    <li class="gallery-list-item gallery-list__item gallery-list__item--1">
+                        <img 
+                            class="gallery-list-item-img gallery-list__img" 
+                            src="./images/image-1.jpg" 
+                            alt="дівчина над натовпом"
+                            width="420"
+                        >
+                        <a class="gallery-list-item-link gallery-list__link" href="./lifestyle.html">LIFESTYLE</a>
+                        <h2 class="gallery-list-item-title gallery-list__title">More than just a music festival</h2>
+                        <p class="gallery-list-item-text gallery-list__text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                            enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                            nisi ut aliquip ex ea.
+                        </p>
+                    </li>
+                    <li class="gallery-list-item gallery-list__item gallery-list__item--2">
+                        <img 
+                            class="gallery-list-item-img gallery-list__img" 
+                            src="./images/image-2.jpg" 
+                            alt="чашка кави у долонях"
+                            width="420"
+                        >
+                        <a class="gallery-list-item-link gallery-list__link" href="./lifestyle.html">LIFESTYLE</a>
+                        <h2 class="gallery-list-item-title gallery-list__title">Life tastes better with coffee</h2>
+                        <p class="gallery-list-item-text gallery-list__text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                            enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                            nisi ut aliquip ex ea.
+                        </p>
+                    </li>
+                    <li class="gallery-list-item gallery-list__item gallery-list__item--3">
+                        <img 
+                            class="gallery-list-item-img gallery-list__img" 
+                            src="./images/image-3.jpg" 
+                            alt="дві дівчини дівляться у небо"
+                            width="420"
+                        >
+                        <a class="gallery-list-item-link gallery-list__link" href="./lifestyle.html">PHOTODIARY</a>
+                        <h2 class="gallery-list-item-title gallery-list__title">American dream</h2>
+                        <p class="gallery-list-item-text gallery-list__text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                            enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                            nisi ut aliquip ex ea.
+                        </p>
+                    </li>
+                    <li class="gallery-list-item gallery-list__item gallery-list__item--4">
+                        <img 
+                            class="gallery-list-item-img gallery-list__img" 
+                            src="./images/image-4.jpg" 
+                            alt="дівчина дівиться у небо"
+                            width="420"
+                        >
+                        <a class="gallery-list-item-link gallery-list__link" href="./lifestyle.html">PHOTODIARY</a>
+                        <h2 class="gallery-list-item-title gallery-list__title">A day exploring the Alps</h2>
+                        <p class="gallery-list-item-text gallery-list__text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                            enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                            nisi ut aliquip ex ea.
+                        </p>
+                    </li>
+                    <li class="gallery-list-item gallery-list__item gallery-list__item--5">
+                        <img 
+                            class="gallery-list-item-img gallery-list__img" 
+                            src="./images/image-5.jpg" 
+                            alt="дівчина в капелюсі дивиться в небо"
+                            width="420"
+                        >
+                        <a class="gallery-list-item-link gallery-list__link" href="./lifestyle.html">LIFESTYLE</a>
+                        <h2 class="gallery-list-item-title gallery-list__title">Top 10 song for running</h2>
+                        <p class="gallery-list-item-text gallery-list__text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                            enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                            nisi ut aliquip ex ea.
+                        </p>
+                    </li>
+                    <li class="gallery-list-item gallery-list__item gallery-list__item--6">
+                        <img 
+                            class="gallery-list-item-img gallery-list__img" 
+                            src="./images/image-6.jpg" 
+                            alt="звивистий шлях"
+                            width="420"
+                        >
+                        <a class="gallery-list-item-link gallery-list__link" href="./lifestyle.html">LIFESTYLE</a>
+                        <h2 class="gallery-list-item-title gallery-list__title">Cold winter days</h2>
+                        <p class="gallery-list-item-text gallery-list__text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                            enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                            nisi ut aliquip ex ea.
+                        </p>
+                    </li>
+                </ul>
+                <button class="gallery-button gallery__button-firts gallery-button--style-firts" type="button">
+                    Load more-1
+                </button>
+                <button class="gallery-button gallery__button-second gallery-button--style-second" type="button">
+                    Load more-2
+                </button>
+            </div>
+        </section>
+    </main>
+    <!-- <footer>
+        <address>
+            <ul>
+                <li><a href="./">Facebook</a></li>
+                <li><a href="./">Twitter</a></li>
+                <li><a href="./">Instagram</a></li>
+            </ul>
+        </address>
+    </footer> -->
+</body>
+
+</html>
