@@ -58,9 +58,9 @@ body {
     max-width: 768px;
   }
 }
-@media screen and (min-width: 905px) {
+@media screen and (min-width: 1200px) {
   .container {
-    max-width: 905px;
+    max-width: 1200px;
   }
 }
 
@@ -71,22 +71,22 @@ body {
   background-color: inherit;
 }
 
-.header {
+.header- {
   padding-top: 71px;
   padding-bottom: 92px;
 }
-.header .nav-list {
+.header- .nav-list {
   width: 555px;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.header .nav-list__link {
+.header- .nav-list__link {
   text-transform: uppercase;
   color: #7d7d7d;
 }
-.header .nav-list__item:hover .nav-list__link {
+.header- .nav-list__item:hover .nav-list__link {
   color: #03a9f4;
 }
 
@@ -102,35 +102,39 @@ body {
 }
 .gallery .container .gallery-list {
   display: flex;
-  flex-wrap: wrap;
-  column-gap: 65px;
+  flex-direction: column;
+  align-items: center;
   row-gap: 130px;
 }
+@media screen and (min-width: 768px) {
+  .gallery .container .gallery-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 65px;
+  }
+}
 .gallery .container .gallery-list__item {
-  flex-basis: calc((100% - 65px) / 2);
-  background-repeat: no-repeat;
-  background-position: right calc(50% + 40px);
+  max-width: 420px;
 }
-.gallery .container .gallery-list__item--1 {
-  background-image: url(https://img.icons8.com/ios/50/1.png);
+@media screen and (min-width: 480px) {
+  .gallery .container .gallery-list__item {
+    flex-basis: 100%;
+  }
 }
-.gallery .container .gallery-list__item--2 {
-  background-image: url(https://img.icons8.com/ios/50/2.png);
+@media screen and (min-width: 768px) {
+  .gallery .container .gallery-list__item {
+    flex-basis: calc((100% - 65px) / 2);
+  }
 }
-.gallery .container .gallery-list__item--3 {
-  background-image: url(https://img.icons8.com/ios/50/3.png);
-}
-.gallery .container .gallery-list__item--4 {
-  background-image: url(https://img.icons8.com/ios/50/4.png);
-}
-.gallery .container .gallery-list__item--5 {
-  background-image: url(https://img.icons8.com/ios/50/5.png);
-}
-.gallery .container .gallery-list__item--6 {
-  background-image: url(https://img.icons8.com/ios/50/6.png);
+@media screen and (min-width: 1200px) {
+  .gallery .container .gallery-list__item {
+    flex-basis: calc((100% - 130px) / 3);
+  }
 }
 .gallery .container .gallery-list__img {
   margin-bottom: 62px;
+  margin: 0 auto;
 }
 .gallery .container .gallery-list__link {
   display: block;

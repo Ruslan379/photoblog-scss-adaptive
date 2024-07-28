@@ -24,7 +24,7 @@
 //         }
         
 //         @media screen and (min-width: $desktop) {
-//             width: 905px;
+//             width: 1200px;
 //         }
 // }
 
@@ -51,6 +51,6 @@
         
         @media screen and (min-width: getBreakPoint('desktop')) {
             max-width: getBreakPoint('desktop');
-            // width: 905px;
+            // width: 1200px;
         }
 }

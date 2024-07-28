@@ -10,25 +10,51 @@
         }
         
         .gallery-list {
-            //!  SASS-flex- Використання міксіна:
-            @include flex_FWw;
-            column-gap: 65px;
-            row-gap: 130px;
+            
+            // @media screen and (max-width: 767px) {
+            // @media screen and (max-width: calc(#{getBreakPoint('tablet')} - 1px)) {
+                //!  SASS-flex - Використання міксіна:
+                @include flex_FDcol-AIcen;
+                row-gap: 130px;
+            // }
+
+            @media screen and (min-width: getBreakPoint('tablet')) {
+                //!  SASS-flex- Використання міксіна:
+                @include flex_FWw;
+                column-gap: 65px;
+                // row-gap: 130px;
+            }
+            
             //! SASS-outline - міксін var.1 
             // @include outline(2px, dotted, tomato);
             
             &__item {
-                flex-basis: calc((100% - 65px) / 2);
+                max-width: 420px;
+                // flex-basis: calc((100% - 130px) / 3);
                 //! ДОДАВАННЯ ФОНОВИХ ЗОБРАЖЕНЬ
                 //todo var.2 - Використання Міксін + @each - цикл для додавання фонових зображень
-                @include galleryItemNumber($numbers);
-                background-repeat: no-repeat;
+                // @include galleryItemNumber($numbers);
+                // background-repeat: no-repeat;
                 //* Інтерполяція значення змінної (правильний синтаксис):
-                background-position: right calc(50% + #{$gallery-item-indentation});
+                // background-position: right calc(50% + #{$gallery-item-indentation});
+
+                @media screen and (min-width: getBreakPoint('mobile')) {
+                    flex-basis: 100%;
+                }
+
+                @media screen and (min-width: getBreakPoint('tablet')) {
+                    flex-basis: calc((100% - 65px) / 2);
+                }
+
+                @media screen and (min-width: getBreakPoint('desktop')) {
+                    flex-basis: calc((100% - 130px) / 3);
+                }
             }
             
             &__img {
+                // flex-basis: 100%;
                 margin-bottom: 62px;
+                margin: 0 auto;
             }
             
             &__link {
