@@ -13,7 +13,7 @@
             // @media screen and (max-width: 767px) {
             // @media screen and (max-width: calc(#{getBreakPoint('tablet')} - 1px)) {
                 @include flex_FDcol-AIcen;
-                row-gap: 130px;
+                row-gap: 65px;
             // }
             //! outline-міксін 
             // @include outline(2px, dotted, tomato);
@@ -22,6 +22,11 @@
             @media screen and (min-width: getBreakPoint('tablet')) {
                 @include flex_FWw;
                 column-gap: 65px;
+            }
+            
+            @media screen and (min-width: getBreakPoint('desktop')) {
+                @include flex_FWw;
+                row-gap: 130px;
             }
 
             &__item {
@@ -46,7 +51,8 @@
             }
 
             &__img {
-                margin: 0 auto 62px;
+                // margin: 0 auto 62px;
+                margin-bottom: 62px;
             }
 
             &__link {
