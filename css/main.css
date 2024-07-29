@@ -90,18 +90,20 @@ body {
 }
 @media screen and (min-width: 768px) {
   .header .nav-list {
-    width: 200px;
+    width: 450px;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
+    column-gap: 125px;
     row-gap: 30px;
   }
 }
 @media screen and (min-width: 1200px) {
   .header .nav-list {
-    width: 555px;
+    width: 860px;
+    column-gap: 0;
   }
 }
 .header .nav-list__link {

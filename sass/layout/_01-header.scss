@@ -21,15 +21,17 @@
         
         //! Медіа-запити
         @media screen and (min-width: getBreakPoint('tablet')) {
-            width: 200px;
+            width: 450px;
             margin: 0 auto;
             @include flex_JCsb-FWw;
+            column-gap: 125px;
             row-gap: 30px;
         }
         
         @media screen and (min-width: getBreakPoint('desktop')) {
-            width: 555px;
+            width: 860px;
             // @include flex_JCsb;
+            column-gap: 0;
         }
 
         &__link {
