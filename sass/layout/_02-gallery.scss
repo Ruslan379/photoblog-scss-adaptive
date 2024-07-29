@@ -9,6 +9,7 @@
         }
 
         .gallery-list {
+            //* До 767px
             // @media screen and (max-width: 767px) {
             // @media screen and (max-width: calc(#{getBreakPoint('tablet')} - 1px)) {
                 @include flex_FDcol-AIcen;
@@ -18,17 +19,19 @@
             // @include outline(2px, dotted, tomato);
             
             //! Медіа-запити
+            //* Від 768px
             @media screen and (min-width: getBreakPoint('tablet')) {
                 @include flex_FWw;
                 column-gap: 65px;
             }
-            
+            //* Від 1200px
             @media screen and (min-width: getBreakPoint('desktop')) {
                 @include flex_FWw;
                 row-gap: 130px;
             }
 
             &__item {
+                //* До 767px
                 flex-basis: 100%;
                 @include flex_FDcol;
                 align-self: stretch;
@@ -36,21 +39,17 @@
                 @include outline(2px, dashed, #00bbbb);
                 
                 //! Медіа-запити
-                // @media screen and (min-width: getBreakPoint('mobile')) {
-                //     flex-basis: 100%;
-                // }
-                
+                //* Від 768px
                 @media screen and (min-width: getBreakPoint('tablet')) {
                     flex-basis: calc((100% - 65px) / 2);
                 }
-                
+                //* Від 1200px
                 @media screen and (min-width: getBreakPoint('desktop')) {
                     flex-basis: calc((100% - 130px) / 3);
                 }
             }
 
             &__img {
-                // margin: 0 auto 62px;
                 margin-bottom: 62px;
             }
 
