@@ -10,6 +10,12 @@
 
 
 //! ----------- SASS-flex-властивості (flex-контейнери-міксіни) -----------
+@mixin flex_JCcen {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 @mixin flex_JCsb {
     display: flex;
     flex-direction: row;
