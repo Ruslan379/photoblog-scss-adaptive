@@ -14,35 +14,20 @@
     }
 
     .nav-list {
-        //todo var.1
-        // @include flex_FDcol-AIcen;
-        // row-gap: 20px;
-        //todo var.2
         display: grid;
         row-gap: 20px;
         grid-template-columns: repeat(1, minmax(max-content, 1fr));
-        //! outline-міксін 
+        //todo  outline-міксін 
         // @include outline(1px, dashed, #2a2a2a);
 
         //! Медіа-запити
         @media screen and (min-width: getBreakPoint('tablet')) {
-            //todo var.1
-            // width: 450px;
-            // margin: 0 auto;
-            // @include flex_JCsb-FWw;
-            // column-gap: 125px;
-            // row-gap: 30px;
-            //todo var.2
             row-gap: 30px;
             grid-template-columns: repeat(2, minmax(max-content, 1fr));
 
         }
         
         @media screen and (min-width: getBreakPoint('desktop')) {
-            //todo var.1
-            // width: 860px;
-            // column-gap: 0;
-            //todo var.2
             grid-template-columns: repeat(4, minmax(max-content, 1fr));
         }
 
@@ -58,7 +43,7 @@
 
         &__item {
             @include flex_JCcen;
-            //! outline-міксін 
+            //todo  outline-міксін 
             @include outline(2px, dotted, blue);
         }
     }

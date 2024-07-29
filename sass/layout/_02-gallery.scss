@@ -2,7 +2,6 @@
     margin-bottom: 66px;
 
     .container {
-        //!  SASS-flex - Використання міксіна:
         @include flex_FDcol-AIcen;
 
         .gallery-title {
@@ -15,7 +14,7 @@
                 @include flex_FDcol-AIcen;
                 row-gap: 65px;
             // }
-            //! outline-міксін 
+            //todo  outline-міксін 
             // @include outline(2px, dotted, tomato);
             
             //! Медіа-запити
@@ -33,7 +32,7 @@
                 flex-basis: 100%;
                 @include flex_FDcol;
                 align-self: stretch;
-                //! outline-міксін 
+                //todo  outline-міксін 
                 @include outline(2px, dashed, #00bbbb);
                 
                 //! Медіа-запити
@@ -72,7 +71,6 @@
             }
         }
 
-        //* +++++ СТИЛІЗАЦІЯ КНОПКИ - 2-й варіант +++++
         .gallery-button {
             @include buttons;
             margin-top: 90px;
