@@ -16,8 +16,13 @@
     }
 
     //? Кнопка Бургер-меню_(open)
-    .menu-toggle {
+    .button-menu-toggle {
         @include buttons-menu-toggle;
+
+        &:hover,
+        &:focus {
+            color: getColor('hover');
+        }
     }
 
     .nav-list {

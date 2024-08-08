@@ -75,11 +75,21 @@
     border-radius: 50%;
     outline: none;
     background-color: transparent;
-
+    
     &:hover,
     &:focus {
         background-color: rgba(0, 0, 0, 0.1);
     }
+    
+    // &.js-close-menu:hover,
+    // &.js-close-menu:focus {
+    //     color: #3cff00;
+    // }
+    
+    // &.js-open-menu:hover,
+    // &.js-open-menu:focus {
+    //     color: getColor('hover');
+    // }
 
     //! Медіа-запити
     //* Від 768px
