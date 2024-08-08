@@ -18,7 +18,7 @@
     //? Кнопка Бургер-меню_(open)
     .button-menu-toggle {
         @include buttons-menu-toggle;
-
+        
         &:hover,
         &:focus {
             color: getColor('hover');
@@ -31,7 +31,7 @@
         display: none;
         //todo  outline-міксін 
         // @include outline(1px, dashed, #2a2a2a);
-
+        
         //! Медіа-запити
         //* Від 768px
         @media screen and (min-width: getBreakPoint('tablet')) {
