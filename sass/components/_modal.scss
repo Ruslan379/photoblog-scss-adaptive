@@ -1,0 +1,56 @@
+//todo Модальні вікна
+//? Контейнер для Бургер-меню
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 32px;
+    background-color: hsla(321, 48%, 48%, 0.95);
+    z-index: 1;
+    transform: translateX(100%);
+    transition: transform 250ms ease-in-out;
+
+    &.is-open {
+        transform: translateX(0);
+    }
+    
+    & .menu-toggle {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        color: #fff;
+    }
+
+    //? Кнопка Бургер-меню_(close)
+    .menu-toggle {
+        @include buttons-menu-toggle;
+    }
+
+    // ? Список для Бургер-меню
+    .nav-list--mobile-menu {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        
+        .nav-list__link {
+            display: block;
+            padding: 10px;
+            color: #fff;
+            text-decoration: none;
+            
+            &:hover {
+                color: getColor('hover');
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+

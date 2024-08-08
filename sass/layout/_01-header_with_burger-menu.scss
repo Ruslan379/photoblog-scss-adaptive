@@ -15,22 +15,22 @@
         padding-bottom: 92px;
     }
 
-    //? Приховуэмо кнопки Бургер-меню
+    //? Кнопка Бургер-меню_(open)
     .menu-toggle {
-        display: none;
+        @include buttons-menu-toggle;
     }
 
     .nav-list {
         //* До 767px
-        display: grid;
-        row-gap: 20px;
-        grid-template-columns: repeat(1, minmax(max-content, 1fr));
+        //? Приховуємо список nav-list (menu)
+        display: none;
         //todo  outline-міксін 
         // @include outline(1px, dashed, #2a2a2a);
 
         //! Медіа-запити
         //* Від 768px
         @media screen and (min-width: getBreakPoint('tablet')) {
+            display: grid;
             row-gap: 30px;
             grid-template-columns: repeat(2, minmax(max-content, 1fr));
         }
@@ -55,4 +55,3 @@
         }
     }
 }
-

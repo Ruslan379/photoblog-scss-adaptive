@@ -16,6 +16,13 @@
     justify-content: center;
 }
 
+@mixin flex_JCcen-AIcen {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
 @mixin flex_JCsb {
     display: flex;
     flex-direction: row;
@@ -54,4 +61,30 @@
     padding: 20px 48px 21px 48px;
     font-size: 1.5rem;
     background-color: inherit;
+}
+
+@mixin buttons-menu-toggle {
+    //* До 767px
+    min-height: 40px;
+    min-width: 40px;
+    margin-left: auto;
+    padding: 0;
+    @include flex_JCcen-AIcen;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    //! Медіа-запити
+    //* Від 768px
+    @media screen and (min-width: getBreakPoint('tablet')) {
+        //? Приховуємо кнопки Бургер-меню
+        display: none;
+    }
 }
