@@ -81,12 +81,30 @@
                 <h1 class="gallery-title">Photoblog</h1>
                 <ul class="gallery-list">
                     <li class="gallery-list__item">
-                        <img 
+                        <!-- <img 
                             class="gallery-list__img" 
                             src="./images/image-1.jpg" 
                             alt="дівчина над натовпом"
                             width="420"
-                        >
+                        > -->
+                        <picture>
+                            <source 
+                                srcset="./images/image-1-desktop-1x.jpg   1x, 
+                                        ./images/image-1-desktop-2x.jpg   2x" 
+                                media="(min-width: 1200px)"
+                            >
+                            <source 
+                                srcset="./images/image-1-tablet-1x.jpg    1x,
+                                        ./images/image-1-tablet-2x.jpg    2x" 
+                                media="(min-width: 768px)"
+                            >
+                            <source 
+                                srcset="./images/image-1-mobile-1x.jpg    1x,
+                                        ./images/image-1-mobile-2x.jpg    2x" 
+                                media="(min-width: 480px)"
+                            >
+                            <img src="./images/image-1-mobile-1x.jpg" alt="дівчина над натовпом">
+                        </picture>
                         <a class="gallery-list__link" href="./lifestyle.html">LIFESTYLE</a>
                         <h2 class="gallery-list__title">More than just a music festival</h2>
                         <p class="gallery-list__text">
