@@ -235,6 +235,7 @@ body {
   display: flex;
   flex-direction: column;
   align-self: stretch;
+  background-color: #ffe2fe;
   outline: 2px dashed #00bbbb;
 }
 @media screen and (min-width: 768px) {
