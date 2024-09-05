@@ -43,16 +43,18 @@
         @media screen and (min-width: getBreakPoint('mobile')) {
             max-width: getBreakPoint('mobile');
             // width: 480px;
-            @include outline(1px, solid,green);
+            @include outline($color:green);
         }
         
         @media screen and (min-width: getBreakPoint('tablet')) {
             max-width: getBreakPoint('tablet');
             // width: 768px;
+            @include outline($color:blue);
         }
         
         @media screen and (min-width: getBreakPoint('desktop')) {
             max-width: getBreakPoint('desktop');
             // width: 1200px;
+            @include outline($color:yellow);
         }
 }
