@@ -43,6 +43,7 @@
         @media screen and (min-width: getBreakPoint('mobile')) {
             max-width: getBreakPoint('mobile');
             // width: 480px;
+            @include outline(1px, solid,green);
         }
         
         @media screen and (min-width: getBreakPoint('tablet')) {
