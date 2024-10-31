@@ -19,7 +19,7 @@
     //? Кнопка Бургер-меню_(open)
     .button-menu-toggle {
         @include buttons-menu-toggle;
-
+        
         //! Медіа-запити
         //* Від 768px
         @media screen and (min-width: getBreakPoint('tablet')) {
@@ -51,16 +51,16 @@
         @media screen and (min-width: getBreakPoint('desktop')) {
             grid-template-columns: repeat(4, minmax(max-content, 1fr));
         }
-
+    
         &__link {
             text-transform: uppercase;
             color: getColor('second');
         }
-
+    
         &__item:hover  .nav-list__link {
             color: getColor('hover');
         }
-
+    
         &__item {
             @include flex_JCcen;
             //todo  outline-міксін 

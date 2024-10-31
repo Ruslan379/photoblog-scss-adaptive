@@ -3,13 +3,14 @@
     padding-top: 15px;
     padding-bottom: 20px;
     background-color: #ffffe5;
-
+    
     //! Медіа-запити
     //* Від 768px
     @media screen and (min-width: getBreakPoint('tablet')) {
         padding-top: 30px;
         padding-bottom: 40px;
     }
+    
     //* Від 1200px
     @media screen and (min-width: getBreakPoint('desktop')) {
         padding-top: 71px;
@@ -28,27 +29,28 @@
         grid-template-columns: repeat(1, minmax(max-content, 1fr));
         //todo  outline-міксін 
         // @include outline(1px, dashed, #2a2a2a);
-
+    
         //! Медіа-запити
         //* Від 768px
         @media screen and (min-width: getBreakPoint('tablet')) {
             row-gap: 30px;
             grid-template-columns: repeat(2, minmax(max-content, 1fr));
         }
+        
         //* Від 1200px
         @media screen and (min-width: getBreakPoint('desktop')) {
             grid-template-columns: repeat(4, minmax(max-content, 1fr));
         }
-
+    
         &__link {
             text-transform: uppercase;
             color: getColor('second');
         }
-
+    
         &__item:hover  .nav-list__link {
             color: getColor('hover');
         }
-
+    
         &__item {
             @include flex_JCcen;
             //todo  outline-міксін 
