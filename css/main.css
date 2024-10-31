@@ -127,6 +127,7 @@ body {
 .header {
   padding-top: 15px;
   padding-bottom: 20px;
+  background-color: #ffffe5;
 }
 @media screen and (min-width: 768px) {
   .header {
@@ -141,37 +142,15 @@ body {
   }
 }
 .header .button-menu-toggle {
-  min-height: 40px;
-  min-width: 40px;
-  margin-left: auto;
-  padding: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  border: none;
-  border-radius: 50%;
-  outline: none;
-  background-color: transparent;
-}
-.header .button-menu-toggle:hover, .header .button-menu-toggle:focus {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-@media screen and (min-width: 768px) {
-  .header .button-menu-toggle {
-    display: none;
-  }
-}
-.header .button-menu-toggle:hover, .header .button-menu-toggle:focus {
-  color: #03a9f4;
+  display: none;
 }
 .header .nav-list {
-  display: none;
+  display: grid;
+  row-gap: 20px;
+  grid-template-columns: repeat(1, minmax(max-content, 1fr));
 }
 @media screen and (min-width: 768px) {
   .header .nav-list {
-    display: grid;
     row-gap: 30px;
     grid-template-columns: repeat(2, minmax(max-content, 1fr));
   }
@@ -197,6 +176,7 @@ body {
 
 .gallery {
   margin-bottom: 66px;
+  background-color: #e5ffe5;
 }
 .gallery .container {
   display: flex;
@@ -233,7 +213,6 @@ body {
   display: flex;
   flex-direction: column;
   align-self: stretch;
-  background-color: #ffe2fe;
   outline: 2px dashed #00bbbb;
 }
 @media screen and (min-width: 768px) {

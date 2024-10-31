@@ -1,5 +1,6 @@
 .gallery {
     margin-bottom: 66px;
+    background-color: #e5ffe5;
 
     .container {
         @include flex_FDcol-AIcen;
@@ -35,7 +36,7 @@
                 flex-basis: 100%;
                 @include flex_FDcol;
                 align-self: stretch;
-                background-color: #ffe2fe;
+                // background-color: #ffe2fe;
                 //todo  outline-міксін 
                 @include outline(2px, dashed, #00bbbb);
                 
