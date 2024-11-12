@@ -23,8 +23,8 @@
         //! Медіа-запити
         //* Від 768px
         @media screen and (min-width: getBreakPoint('tablet')) {
-        //? Приховуємо кнопку Бургер-меню
-        display: none;
+            //? Приховуємо кнопку Бургер-меню
+            display: none;
         }
         
         &:hover,
